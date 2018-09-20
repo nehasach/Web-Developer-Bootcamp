@@ -1,0 +1,38 @@
+body{
+	color:blue;
+}
+/*element selector*/
+li{
+	border: 2px solid red;
+}
+/*ID selector*/
+#Rusty {
+	background: red;
+}
+/*class selector*/
+.highlight{
+	text-decoration: line-through;
+}
+
+/*star* selector*/
+* {
+	color:black;
+}
+
+/*descendent selector*/
+ 
+li input {
+	color:blue;
+}
+/*adjacent selecto*/
+h1 + ul {
+	border:2px solid blue;
+}
+
+input[type="checkbox"]{
+	border:2px solid blue;
+}
+
+li:nth-of-type(3){
+	background:purple;
+}
