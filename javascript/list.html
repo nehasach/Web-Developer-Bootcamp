@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List</title>
+	<script type="text/javascript">
+		var todos = [];
+		var option=prompt("What would you like to do?")
+		while(option != "quit"){
+		if(option == "new"){
+			var newtodo = prompt("Enter you todo?");
+			todos.push(newtodo);
+		}
+		else if(option == "list"){
+			console.log(todos);
+		}
+		option=prompt("What would you like to do?")
+	 }
+	 console.log("you have quitted the app");
+	</script>
+</head>
+<body>
+<h1>Todo List</h1>
+</body>
+</html>
