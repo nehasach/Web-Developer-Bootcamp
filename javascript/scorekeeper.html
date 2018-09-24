@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Score Keeper</title>
+
+</head>
+<body>
+<h1><span id="player1">0</span> to <span id="player2">0</span></h1>
+
+<p>Playing to 7</p>
+<input type="number">
+<button id="p1">Player 1</button>
+<button id="p2">Player 2</button>
+<button id="reset">Reset</button>
+<script type="text/javascript">
+	
+	var p1=document.getElementById("p1");
+	var p2=document.getElementById("p2");
+  	var p1score = 0;
+  	var p2score = 0;
+  	var player1 = document.getElementById("player1");
+  	var player2 = document.getElementById("player2");
+  	var gameover=false;
+  	var gameOver=false;
+  	var winning=7;
+  	var reset=document.getElementById("reset");
+
+  	p1.addEventListener("click", function(){
+  		if(!gameover){
+  		p1score++;
+  		if(p1score===winning){
+  			player1.style.color="green";
+  			gameover=true;
+  		}
+  		player1.textContent = p1score;
+  		}
+  	});
+  	
+  	p2.addEventListener("click", function(){
+  		console.log(gameOver);
+  			if(!gameOver){
+  		p2score++;
+  		if(p2score===winning){
+  			player2.style.color="green";
+  			gameOver=true;
+  		}
+  		player2.textContent = p2score;
+  		}
+  	});
+
+  	reset.addEventListener("click",function(){
+  		player2.style.color="black";
+  		player1.style.color="black";
+  		player1.textContent = 0;
+  		player2.textContent = 0;
+  		gameover=false;
+  		gameOver=false;
+  		p1score=0;
+  		p2score=0;
+  	});
+
+</script>
+</body>
+</html>
